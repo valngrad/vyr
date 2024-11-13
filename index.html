@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The VYR Protocol</title>
+  <style>
+    :root {
+      --text-scale: 1.2; /* This is your control variable - increase or decrease to scale all text */
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Fira Code", monospace;
+      color: white;
+    }
+    
+    body {
+      background-color: black;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .corner-text {
+      position: absolute;
+      font-size: calc(22px * var(--text-scale));
+      z-index: 2;
+    }
+    
+    .top-left {
+      top: 40px;
+      left: 40px;
+    }
+    
+    .bottom-left {
+      bottom: 80px;
+      left: 40px;
+    }
+    
+    .top-right {
+      top: 40px;
+      right: 80px;
+      font-size: calc(22px * var(--text-scale));
+    }
+    
+    .bottom-right {
+      bottom: 40px;
+      right: 40px;
+      width: calc(350px * var(--text-scale));
+      font-size: calc(12px * var(--text-scale));
+    }
+    
+    .center-image {
+      max-width: 75%;
+      max-height: 75%;
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      opacity: 0.8;
+    }
+    
+    a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-top: calc(10px * var(--text-scale));
+      font-size: calc(20px * var(--text-scale));
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    .additional-links {
+      position: absolute;
+      left: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+    
+    .additional-links a {
+      margin-bottom: calc(15px * var(--text-scale));
+    }
+    
+    .additional-links a:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="corner-text top-left">
+    The VYR protocol
+  </div>
+  <div class="corner-text bottom-left">/ˈwʌɪə/</div>
+  <a href="https://x.com/aftwks" target="_blank" class="corner-text top-right">@AftrWks</a>
+  <div class="corner-text bottom-right">
+    Alice generates a proof of ownership by creating a unique state transformation based on her private key and the asset's initial state (its hash). This transformation is one-way, meaning that Bob can verify it but cannot reverse it to learn Alice's private key.
+  </div>
+  <div class="additional-links">
+    <a href="https://github.com/aftwks" target="_blank">Build on Vyr</a>
+    <a href="https://aftwks.github.io/vyrLitepaper" target="_blank">Read Litepaper</a>
+    <a href="https://aftwks.github.io/vyrPitch" target="_blank">View the Pitch</a>
+    <a href="https://aftwks.github.io/vyrPitch" target="_blank">Learn More</a>
+  </div>
+  <img src="https://cdn.glitch.me/0846f6ac-90cd-4f0b-a9e6-783892332eac/Untitled%20design%20(3).gif?v=1731414510250" alt="Center Image" class="center-image" loop>
+</body>
+</html>
